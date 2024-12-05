@@ -1,32 +1,32 @@
 import React from 'react';
-import './Home.css';
+import './Root.css';
 import { useNavigate } from 'react-router-dom';
 
-function Home() {
+function Root() {
     const navigate = useNavigate();
   
-    const navigateToHome = () => {
-      navigate('/login');
+    const navigateToRoot = () => {
+      navigate('/days');
     };
   
     return (
-      <div className="Home">
+      <div className="Root">
         <form>
             <h1>
-                ホーム
+                ルート選択
             </h1>
             <hr />
 
             <button 
             type="button" 
             className="button" 
-            onClick={navigateToHome}
+            onClick={navigateToRoot}
             >
-            ホーム
+            ルート選択
             </button>
         </form>
       </div>
     );
   }
 
-  export default Home;
+  export default Root;
