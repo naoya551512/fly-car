@@ -1,35 +1,93 @@
-.Days {
-  background-color: rgb(175, 226, 251);
-  flex-direction: column;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;  
+body {
+  /* background-color: #9eb9cf; */
+  background: rgb(105, 88, 177);
+  background: linear-gradient(
+    117deg,
+    rgb(120, 105, 187) 5%,
+    rgba(107, 223, 233, 0.956) 100%
+  );
+  overflow-y: hidden;
 }
 
-.Days form {
-  background-color: white;
-  width: 70%;
-  max-width: 450px;
-  padding : 30px;
-  border-radius: 10px;
-  border : 1px solid black;
+.formContainer {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
 }
 
 h1 {
   text-align: center;
-  font-size: 40px;
+  margin: 13px 0;
 }
 
-.button {
-  background-color:brown;
-  color:white;
-  padding: 30px 80px;
-  font-size: 30px;
+.formContainer form {
+  width: 70%;
+  max-width: 450px;
+  border: 1px solid #dfefef;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fbf5f5;
+  box-shadow: 2px 12px 17px -7px #383838;
+  border-radius: 15px;
+}
+
+.uiForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 400px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.formField input {
+  border: 1px solid grey;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.formField input:focus {
+  outline: none;
+}
+
+.formField label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+button {
+  background: #0563b4;
+  width: 100%;
+  margin-top: 10px;
   border: none;
-  margin-top: 100px;
-  margin-bottom: 150px;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #0e528d;
+}
+
+.errorMsg {
+  color: red;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.msgOk {
+  color: green;
+  margin-top: 15px;
 }

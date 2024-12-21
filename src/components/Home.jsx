@@ -5,28 +5,27 @@ import { useNavigate } from 'react-router-dom';
 function Home() {
     const navigate = useNavigate();
   
-    const navigateToHome = () => {
+    const navigateToLogin = () => {
       navigate('/login');
     };
-  
+
     return (
-      <div className="Home">
-        <form>
-            <h1>
-                ホーム
-            </h1>
-            <hr />
-
-            <button 
-            type="button" 
-            className="button" 
-            onClick={navigateToHome}
-            >
-            ホーム
-            </button>
-        </form>
+      <div className="formContainer">
+          <div className="infoBox">
+              <h1>空飛ぶ車予約サイト</h1>
+              <hr />
+              <div className="infoContent">
+                  <h3>お問い合わせ情報</h3>
+                  <p>電話番号: 090-XXXX-XXXX</p>
+                  <p>営業時間: 9:00 - 18:00 </p>
+                  <p>「ログインへ」をクリックしてログインページに進んでください。</p>
+              </div>
+              <button className="submitButton" onClick={navigateToLogin}>
+                  ログインへ
+              </button>
+          </div>
       </div>
-    );
-  }
+  );
+}
 
-  export default Home;
+export default Home;

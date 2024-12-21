@@ -1,18 +1,15 @@
 import React from 'react';
-import './Login.css';
+import './NewLogin.css';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
 
-function Login() {
+function NewLogin() {
     const navigate = useNavigate();
   
-    const navigateToLogin1 = () => {
+    const navigateToLogin = () => {
       navigate('/reserve');
     };
-    const navigateToLogin2 = () => {
-      navigate('/newlogin');
-    };
-  
+
   const initialValues = { username: "", mailAddress: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErros, setFormErrors] = useState({});
@@ -68,7 +65,7 @@ function Login() {
   return (
     <div className="formContainer">
       <form onSubmit={handleSubmit}>
-        <h1>ログイン</h1>
+        <h1>新規登録</h1>
         <hr />
         <div className="uiForm">
           <div className="formField">
@@ -105,10 +102,9 @@ function Login() {
             />
           </div>
           <p className="errorMsg">{formErros.password}</p>
-          <button className="submitButton" onClick={navigateToLogin1}>ログイン</button>
-          <button className="submitButton" onClick={navigateToLogin2}>新規登録</button>
+          <button className="submitButton" onClick={navigateToLogin}>登録</button>
           {Object.keys(formErros).length === 0 && isSubmit && (
-            <div className="msgOk">ログインに成功しました</div>
+            <div className="msgOk">新規登録に成功しました</div>
           )}
         </div>
       </form>
@@ -116,4 +112,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default NewLogin;
